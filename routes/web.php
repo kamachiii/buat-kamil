@@ -15,5 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[BegituSulidController::class, 'index'])->name("index");
-Route::post('store',[BegituSulidController::class, 'store'])->name("store");
+Route::post('/store',[BegituSulidController::class, 'store'])->name("store");
 

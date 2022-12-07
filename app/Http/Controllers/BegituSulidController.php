@@ -10,7 +10,7 @@ class BegituSulidController extends Controller
     public function index(){
 
         $data = BegituSulid::get();
-  
+
       return view('index')
       ->with('data', $data);
      }
@@ -21,11 +21,10 @@ class BegituSulidController extends Controller
              'Nis' => 'required',
              'Nama' => 'required',
              'Rayon' => 'required',
-             'Uang' => 'required',
          ]);
- 
+
          BegituSulid::create($request->all());
- 
+
          return redirect()->route('index')
                      ->with('success', 'Create Succesfully!');
      }
